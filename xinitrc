@@ -11,15 +11,15 @@ feh --bg-fill ~/.i3/background
 unclutter -root -visible &
 
 #clipboard synchronization
-autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
+#autocutsel -fork &
+#autocutsel -selection PRIMARY -fork &
 
 #dbus instance
 eval `dbus-launch --sh-syntax --exit-with-session`
 
 #apps
-start-pulseaudio-x11 &
-urxvtd &
+#start-pulseaudio-x11 &
+#urxvtd &
 
 #keyboard layout
 setxkbmap -layout pl
