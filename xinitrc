@@ -5,10 +5,10 @@ xset -b
 xrdb -merge ~/.i3/xresources
 
 #background
-feh --bg-fill ~/.i3/background
+#feh --bg-fill ~/.i3/background
 
 #hide mouse coursor when it isn't used
-unclutter -root -visible &
+#unclutter -root -visible &
 
 #clipboard synchronization
 #autocutsel -fork &
@@ -27,9 +27,9 @@ xterm &
 #[ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
 
 #notification
-dunst -config ~/.i3/dunstrc &
+#dunst -config ~/.i3/dunstrc &
 
 #disks automounting
-udiskie &
+#udiskie &
 
 i3
