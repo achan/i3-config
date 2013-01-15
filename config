@@ -138,20 +138,34 @@ bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h           resize shrink width 10 px or 10 ppt
-        bindsym j           resize grow height 10 px or 10 ppt
-        bindsym k           resize shrink height 10 px or 10 ppt
-        bindsym l           resize grow width 10 px or 10 ppt
+        # They resize the border in the direction you pressed, e.g.
+        # when pressing left, the window is resized so that it has
+        # more space on its left
+
+        bindsym h               resize shrink left 10 px or 10 ppt
+        bindsym Shift+H         resize grow   left 10 px or 10 ppt
+
+        bindsym j               resize shrink down 10 px or 10 ppt
+        bindsym Shift+J         resize grow   down 10 px or 10 ppt
+
+        bindsym k               resize shrink up 10 px or 10 ppt
+        bindsym Shift+K         resize grow   up 10 px or 10 ppt
+
+        bindsym l               resize shrink right 10 px or 10 ppt
+        bindsym Shift+L         resize grow   right 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+        bindsym Left        resize shrink left 10 px or 10 ppt
+        bindsym Shift+Left  resize grow   left 10 px or 10 ppt
+
+        bindsym Down        resize shrink down 10 px or 10 ppt
+        bindsym Shift+Down  resize grow   down 10 px or 10 ppt
+
+        bindsym Up          resize shrink up 10 px or 10 ppt
+        bindsym Shift+Up    resize grow   up 10 px or 10 ppt
+
+        bindsym Right       resize shrink right 10 px or 10 ppt
+        bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -171,6 +185,23 @@ bindsym Mod1+r mode "resize"
 #    focused_workspace #666666 $blue #ffffff
 #  }
 #}
+
+for_window [class="eclipse"] floating enable
+
+# assign workspaces to screens
+set $leftScreen DVI-I-2
+set $rightScreen DVI-I-3
+
+workspace 1 output $leftScreen
+workspace 2 output $leftScreen
+workspace 3 output $leftScreen
+workspace 4 output $leftScreen
+workspace 5 output $leftScreen
+workspace 6 output $leftScreen
+workspace 7 output $rightScreen
+workspace 8 output $rightScreen
+workspace 9 output $rightScreen
+workspace 10 output $rightScreen
 
 exec i3bar -d
 

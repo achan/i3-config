@@ -32,4 +32,6 @@ xterm &
 #disks automounting
 #udiskie &
 
+i3status -c ~/.i3/i3status.conf | dzen2 -fn '-*-terminus-*-r-normal-*-*-50-*-*-*-*-iso8859-*' -ta r -y 1590 -x 1900 -w 500 &
+
 i3
