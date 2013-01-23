@@ -1,2 +1,3 @@
 XTerm*foreground: rgb:ff/ff/ff
 XTerm*background: rgb:00/00/00
+XTerm*scrollBar: off

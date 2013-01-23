@@ -1,5 +1,5 @@
-font xft:Inconsolata bold 8.5
-new_window 1pixel 
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+new_window bp 
 
 set $blue #003366
 set $gray1 #444444
@@ -37,7 +37,7 @@ client.unfocused #000000 $gray2 #FFFFFF #000000
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec i3-sensible-terminal
+bindsym Mod1+Return exec xterm
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -50,10 +50,10 @@ bindsym Mod1+d exec dmenu_run -nb black
 # bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym Mod1+h focus left
-bindsym Mod1+j focus down
-bindsym Mod1+k focus up
-bindsym Mod1+l focus right
+bindsym Mod1+h h
+bindsym Mod1+j j
+bindsym Mod1+k k
+bindsym Mod1+l l
 
 # alternatively, you can use the cursor keys:
 #bindsym Mod1+Left focus left
@@ -62,16 +62,16 @@ bindsym Mod1+l focus right
 #bindsym Mod1+Right focus right
 
 # move focused window
-bindsym Mod1+Shift+h move left
-bindsym Mod1+Shift+j move down
-bindsym Mod1+Shift+k move up
-bindsym Mod1+Shift+l move right
+bindsym Mod1+Shift+h mh
+bindsym Mod1+Shift+j mj
+bindsym Mod1+Shift+k mk 
+bindsym Mod1+Shift+l ml
 
 # alternatively, you can use the cursor keys:
-bindsym Mod1+Shift+Left move left
-bindsym Mod1+Shift+Down move down
-bindsym Mod1+Shift+Up move up
-bindsym Mod1+Shift+Right move right
+bindsym Mod1+Shift+Left mh
+bindsym Mod1+Shift+Down mj
+bindsym Mod1+Shift+Up mk
+bindsym Mod1+Shift+Right ml
 
 # split in horizontal orientation
 bindsym Mod1+Shift+o split h
@@ -100,28 +100,28 @@ bindsym Mod1+a focus parent
 #bindsym Mod1+d focus child
 
 # switch to workspace
-bindsym Mod1+1 workspace 1
-bindsym Mod1+2 workspace 2
-bindsym Mod1+3 workspace 3
-bindsym Mod1+4 workspace 4
-bindsym Mod1+5 workspace 5
-bindsym Mod1+6 workspace 6
-bindsym Mod1+7 workspace 7
-bindsym Mod1+8 workspace 8
-bindsym Mod1+9 workspace 9
-bindsym Mod1+0 workspace 10
+bindsym Mod1+1 1
+bindsym Mod1+2 2
+bindsym Mod1+3 3
+bindsym Mod1+4 4
+bindsym Mod1+5 5
+bindsym Mod1+6 6
+bindsym Mod1+7 7
+bindsym Mod1+8 8
+bindsym Mod1+9 9
+bindsym Mod1+0 10
 
 # move focused container to workspace
-bindsym Mod1+Shift+1 move container to workspace 1
-bindsym Mod1+Shift+2 move container to workspace 2
-bindsym Mod1+Shift+3 move container to workspace 3
-bindsym Mod1+Shift+4 move container to workspace 4
-bindsym Mod1+Shift+5 move container to workspace 5
-bindsym Mod1+Shift+6 move container to workspace 6
-bindsym Mod1+Shift+7 move container to workspace 7
-bindsym Mod1+Shift+8 move container to workspace 8
-bindsym Mod1+Shift+9 move container to workspace 9
-bindsym Mod1+Shift+0 move container to workspace 10
+bindsym Mod1+Shift+1 m1
+bindsym Mod1+Shift+2 m2
+bindsym Mod1+Shift+3 m3
+bindsym Mod1+Shift+4 m4
+bindsym Mod1+Shift+5 m5
+bindsym Mod1+Shift+6 m6
+bindsym Mod1+Shift+7 m7
+bindsym Mod1+Shift+8 m8
+bindsym Mod1+Shift+9 m9
+bindsym Mod1+Shift+0 m10
 
 # reload the configuration file
 bindsym Mod1+Shift+c reload
